@@ -18,7 +18,9 @@
     "url": "https://github.com/Linkurious/code-tools/issues"
   },
   "homepage": "https://github.com/Linkurious/code-tools#readme",
-  "scripts": {},
+  "scripts": {
+    "postversion": "./bin/sync_versions.js"
+  },
   "author": "LK",
   "license": "ISC"
 }
