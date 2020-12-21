@@ -1,0 +1,24 @@
+{
+  "name": "@linkurious/code-tools",
+  "version": "0.0.1",
+  "description": "Various tools for code taks automation, written in Node",
+  "main": "index.js",
+  "bin": {
+    "sync_versions": "./bin/sync_versions.js"
+  },
+  "publishConfig": {
+    "registry": "https://nexus3.vpc.prod.scw-par1.linkurious.net/repository/npm-linkurious/"
+  },
+  "url": "https://github.com/Linkurious/code-tools",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Linkurious/code-tools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Linkurious/code-tools/issues"
+  },
+  "homepage": "https://github.com/Linkurious/code-tools#readme",
+  "scripts": {},
+  "author": "LK",
+  "license": "ISC"
+}
