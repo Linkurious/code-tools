@@ -13,7 +13,7 @@ Syncs versions between `package.json`, `.version`, `.bumpversion.cfg`. Use in `p
 
 ```json
 "script": {
-  "bump:patch": "npm version patch --no-git-tag && sync_versions",
+  "postversion": "sync_versions", // will sync everything after you have changed the versions
   ...
 }
 ```
