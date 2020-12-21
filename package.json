@@ -1,6 +1,6 @@
 {
   "name": "@linkurious/code-tools",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Various tools for code taks automation, written in Node",
   "main": "index.js",
   "bin": {
@@ -18,7 +18,9 @@
     "url": "https://github.com/Linkurious/code-tools/issues"
   },
   "homepage": "https://github.com/Linkurious/code-tools#readme",
-  "scripts": {},
+  "scripts": {
+    "postversion": "./bin/sync_versions.js"
+  },
   "author": "LK",
   "license": "ISC"
 }
