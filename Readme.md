@@ -11,7 +11,7 @@ $ sync_versions
 ```
 Syncs versions between `package.json`, `.version`, `.bumpversion.cfg`. Use in `postbump` npm script:
 
-```json
+```js
 "script": {
   "postversion": "sync_versions", // will sync everything after you have changed the versions
   ...
