@@ -13,7 +13,7 @@ Syncs versions between `package.json`, `.version`, `.bumpversion.cfg`. Use in `p
 
 ```js
 "script": {
-  "postversion": "sync_versions", // will sync everything after you have changed the versions
+  "postversion": "sync_versions", // will sync everything after 'npm version ...'
   ...
 }
 ```
