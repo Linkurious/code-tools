@@ -4,4 +4,5 @@ nodeJob {
   projectName = "linkurious/code-tools"
   createGitTag = true
   runUnitTests = false
+  runE2eTests = false
 }
