@@ -1,6 +1,6 @@
 @Library('linkurious-shared')_
 
 nodeJob {
-  projectName = "Shared/code-tools"
+  projectName = "linkurious/code-tools"
   createGitTag = true
 }
