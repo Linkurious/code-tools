@@ -17,3 +17,10 @@ Syncs versions between `package.json`, `.version`, `.bumpversion.cfg`. Use in `p
   ...
 }
 ```
+This way, when you do
+
+```
+npm version --no-git-tag vX.Y.Z
+```
+
+The other files get updated automatically after.
