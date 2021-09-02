@@ -22,5 +22,5 @@
     "postversion": "./bin/sync_versions.js"
   },
   "author": "LK",
-  "license": "ISC"
+  "license": "Apache-2.0"
 }
