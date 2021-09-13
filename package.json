@@ -6,6 +6,9 @@
   "bin": {
     "sync_versions": "./bin/sync_versions.js"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "url": "https://github.com/Linkurious/code-tools",
   "repository": {
     "type": "git",
