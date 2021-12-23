@@ -1,10 +1,12 @@
 {
   "name": "@linkurious/code-tools",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Various tools for code taks automation, written in Node",
   "main": "index.js",
+  "type": "module",
   "bin": {
-    "sync_versions": "./bin/sync_versions.js"
+    "sync_versions": "./bin/sync_versions.js",
+    "copy_npmrc": "./bin/copy_npmrc.js"
   },
   "publishConfig": {
     "access": "public"
@@ -23,5 +25,9 @@
     "postversion": "./bin/sync_versions.js"
   },
   "author": "LK",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "chalk": "^5.0.0",
+    "minimist": "^1.2.5"
+  }
 }
