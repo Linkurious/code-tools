@@ -28,7 +28,7 @@ function updateJSON(filename, version) {
       if (json.pluginApiVersion) {
         json.pluginApiVersion = version;
       }
-      return fs.writeFile(filepath, JSON.stringify(json));
+      return fs.writeFile(filepath, JSON.stringify(json, 0,2));
     })
 }
 fs.readFile(path.join(process.cwd(), "package.json"), "utf8")
