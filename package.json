@@ -9,7 +9,7 @@
     "copy_npmrc": "./bin/copy_npmrc.js"
   },
   "engines": {
-    "node": "16.18.1"
+    "node": "16.19.0"
   },
   "publishConfig": {
     "access": "public"
