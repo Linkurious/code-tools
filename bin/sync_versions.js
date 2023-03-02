@@ -17,19 +17,16 @@ const versionPath = path.join(process.cwd(), ".version");
 let version = "0.0.0";
 
 function updateJSON(filename, version) {
-  const filepath = path.join(process.cwd(), filename) 
-  return fs.readFile(filepath, "utf8")
+  const filepath = path.join(process.cwd(), filename);
+  return fs
+    .readFile(filepath, "utf8")
     .then((fileContent) => JSON.parse(fileContent))
     .then((json) => {
-      if (json.version) {
-        json.version = version;
-      }
+      if (json.version) json.version = version;
       // lke-plugins manifest update
-      if (json.pluginApiVersion) {
-        json.pluginApiVersion = version;
-      }
-      return fs.writeFile(filepath, JSON.stringify(json));
-    })
+      if (json.pluginApiVersion) json.pluginApiVersion = version;
+      return fs.writeFile(filepath, JSON.stringify(json, undefined, 2));
+    });
 }
 fs.readFile(path.join(process.cwd(), "package.json"), "utf8")
   .then((packageJson) => (version = JSON.parse(packageJson).version))
@@ -43,10 +40,14 @@ fs.readFile(path.join(process.cwd(), "package.json"), "utf8")
     const matches = cfg.match(/\[bumpversion:file:(.*)\]/g);
     let updateFiles = Promise.resolve();
     if (matches && matches.length) {
-      updateFiles = updateFiles.then(() => Promise.all(matches
-        .map(m => m.match(/\[bumpversion:file:(.*)\]/)[1])
-        .filter(filepath => filepath && filepath.endsWith('.json'))
-        .map(filepath =>  updateJSON(filepath, version))));
+      updateFiles = updateFiles.then(() =>
+        Promise.all(
+          matches
+            .map((m) => m.match(/\[bumpversion:file:(.*)\]/)[1])
+            .filter((filepath) => filepath && filepath.endsWith(".json"))
+            .map((filepath) => updateJSON(filepath, version))
+        )
+      );
     }
     return updateFiles.then(() => fs.writeFile(cfgPath, updated, "utf8"));
   })
