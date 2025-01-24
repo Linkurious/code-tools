@@ -1,6 +1,6 @@
 {
   "name": "@linkurious/code-tools",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Various tools for code taks automation, written in Node",
   "main": "index.js",
   "type": "module",
