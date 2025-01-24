@@ -1,15 +1,12 @@
 {
   "name": "@linkurious/code-tools",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Various tools for code taks automation, written in Node",
   "main": "index.js",
   "type": "module",
   "bin": {
     "sync_versions": "./bin/sync_versions.js",
     "copy_npmrc": "./bin/copy_npmrc.js"
-  },
-  "engines": {
-    "node": "18.14.2"
   },
   "publishConfig": {
     "access": "public"
