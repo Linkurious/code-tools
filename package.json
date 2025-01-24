@@ -8,9 +8,6 @@
     "sync_versions": "./bin/sync_versions.js",
     "copy_npmrc": "./bin/copy_npmrc.js"
   },
-  "engines": {
-    "node": "18.20.6"
-  },
   "publishConfig": {
     "access": "public"
   },
