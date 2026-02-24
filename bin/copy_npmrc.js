@@ -3,11 +3,15 @@
 import fs from "fs";
 import { copyFile } from "fs/promises";
 import path from "path";
+import { parseArgs } from "util";
 import chalk from "chalk";
-import readargv from "minimist";
 
-const argv = readargv(process.argv.slice(2));
-const verbose = argv.verbose || argv.v || false;
+const { values } = parseArgs({
+  options: {
+    verbose: { type: "boolean", short: "v" },
+  },
+});
+const verbose = values.verbose || false;
 
 const log = (str, force = false) => {
   if (verbose || force) console.log(str);
