@@ -1,6 +1,6 @@
 {
   "name": "@linkurious/code-tools",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Various tools for code taks automation, written in Node",
   "main": "index.js",
   "type": "module",
@@ -22,12 +22,13 @@
   "homepage": "https://github.com/Linkurious/code-tools#readme",
   "scripts": {
     "bump:patch": "npm version patch --no-git-tag",
-    "postversion": "./bin/sync_versions.js"
+    "postversion": "./bin/sync_versions.js",
+    "test": "node --test",
+    "test:unit": "node --test"
   },
   "author": "LK",
   "license": "Apache-2.0",
-  "devDependencies": {
-    "chalk": "^5.0.0",
-    "minimist": "^1.2.6"
+  "dependencies": {
+    "chalk": "^5.4.1"
   }
 }
