@@ -2,9 +2,9 @@
 
 nodeJob {
   projectName = "linkurious/code-tools"
-  podTemplateNames = ['jnlp-agent-node']  
+  podTemplateNames = ['jnlp-agent-node']
   createGitTag = true
-  runUnitTests = false
+  runUnitTests = true
   runE2eTests = false
   gitTagPrefix = 'v'
   runBookeeping = true
